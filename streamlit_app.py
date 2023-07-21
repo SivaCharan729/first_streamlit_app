@@ -52,7 +52,7 @@ try:
 #streamlit.dataframe(fruityvice_normalized)
 
 #don't tun anything past here while we troubleshoot
-streamlit.stop()
+#streamlit.stop()
 
 
 
