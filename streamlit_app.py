@@ -41,34 +41,3 @@ try:
   
 #except URLError as e:
   #streamlit.error()
-
-
-
-
-
-# write your own comment -what does the next line do? 
-
-# write your own comment - what does this do?
-#streamlit.dataframe(fruityvice_normalized)
-
-#don't tun anything past here while we troubleshoot
-#streamlit.stop()
-
-
-
-
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
-my_data_rows = my_cur.fetchall()
-streamlit.text("The fruit load list contains:")
-streamlit.text(my_data_rows)
-
-#Allow the end user to add a fruit to the list 
-add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-streamlit.write('The user entered ', add_my_fruit)
-streamlit.write('Thanks for adding ', add_my_fruit)
-
-#This will not work correctly, but just go with it for now
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
-
