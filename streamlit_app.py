@@ -39,8 +39,8 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
   
-except URLError as e:
-  streamlit.error()
+#except URLError as e:
+  #streamlit.error()
 
 
 
@@ -49,7 +49,7 @@ except URLError as e:
 # write your own comment -what does the next line do? 
 
 # write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.dataframe(fruityvice_normalized)
 
 #don't tun anything past here while we troubleshoot
 streamlit.stop()
