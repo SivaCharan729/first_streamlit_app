@@ -35,4 +35,3 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 import smowflake.connector
-
